@@ -1,10 +1,16 @@
-let name    =   window.prompt("Please Enter Your Name !!")      || "no Name";
-let surname =   window.prompt("Please Enter Your surname !!")   || "no Surname";
-let city    =   window.prompt("Please Enter Your city !!")      || "no City";
+const name      = document.getElementById("name");
+const surname   = document.getElementById("surname");
+const city      = document.getElementById("city");
+const Validate  = document.getElementById("validate");
 
+Validate.addEventListener("click", function () {
+        let nameValue    = name.value || "no Name";
+        let surnameValue = surname.value || "no Surname";
+        let cityValue    = city.value || "no City";
 
-alert(`
-        Nom : ${name}
-        prénom : ${surname}
-        Ville : ${city}
+        alert(`
+Nom : ${nameValue}
+prénom : ${surnameValue}
+Ville : ${cityValue}
 `);
+});
