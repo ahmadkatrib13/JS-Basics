@@ -1,4 +1,12 @@
-let age =   window.prompt("give me your age !!");
+const age = document.getElementById("age");
+const validate = document.getElementById("validate");
 
-if(age >= 18) alert("you are over 18");
-else alert("you are under 18");
+alert("give me your age !!");
+
+const test_age =(age)=>{
+    if(age >= 18) return "you are over 18";
+    return "you are under 18";
+};
+
+validate.addEventListener("click",()=>{alert(test_age(age.value))});
+
