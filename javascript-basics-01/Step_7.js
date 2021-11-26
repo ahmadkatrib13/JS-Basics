@@ -1,8 +1,12 @@
-let shoe_size =   window.prompt("give me your shoe size !!");
-let birth_year =   window.prompt("give me your birth year !!");
+alert("give me your shoe size and your birth year");
 
-const magicFunction = (shoe_size,birth_year) => {
-  return (shoe_size * 2 + 5) * 50 - birth_year +1766;
+const shoe_size = document.getElementById("shoe_size");
+const year = document.getElementById("year");
+const validate = document.getElementById("validate");
+
+function magicFunction(shoe_size,birth_year){
+  alert (((shoe_size * 2 + 5) * 50 - birth_year +1766) || "incorrect values");
 };
 
-alert("The result is = " + magicFunction(shoe_size,birth_year));
+
+validate.addEventListener("click",()=>{magicFunction(shoe_size.value,year.value)});
