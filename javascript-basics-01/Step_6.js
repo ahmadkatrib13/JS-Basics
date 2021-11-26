@@ -1,4 +1,13 @@
-let nb1 =   window.prompt("give me the first number !!");
-let nb2 =   window.prompt("give me the second number !!");
+const firstNumber      = document.getElementById("first_number");
+const secondNumber   = document.getElementById("second_number");
+const validate      = document.getElementById("validate");
 
-alert("the reminder of devision of "+nb1+" by "+nb2+" = "+nb1%nb2);
+validate.addEventListener("click",function(){
+    // e.preventDefault();
+    let firstValue = firstNumber.value || 0;
+    let secondValue = secondNumber.value || 0;
+
+    let result = firstValue%secondValue;
+    alert(`
+    the remainder of the division of ${firstValue} by ${secondValue} is : ${result}`);
+});
